@@ -13,21 +13,41 @@ Last updated: 17/04/2018
 Available at: https://github.com/GTRONICK/QSS/blob/master/ElegantDark.qss
 */
 
-
-*[normalPushButton="true"] {
-    text-align:center;
-    padding-left: 0px;
-}
-
+/*
+------- QMainWindow
+*/
 QMainWindow {
 	background-color:rgb(82, 82, 82);
 }
 
+/*
+------- QTextEdit
+*/
 QTextEdit {
-	background-color:rgb(42, 42, 42);
-	color: rgb(0, 255, 0);
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(58, 58, 58);
+        border-style: inset;
+        padding: 0 8px;
+        color: rgb(255, 255, 255);
+        background:rgb(100, 100, 100);
+        selection-background-color: rgb(187, 187, 187);
+        selection-color: rgb(60, 63, 65);
+}
+QTextEdit:disabled {
+        border-width: 1px; border-radius: 4px;
+        border-color: rgb(58, 58, 58);
+        border-style: inset;
+        padding: 0 8px;
+        color: rgb(187, 187, 187);
+        background:rgb(100, 100, 100);
+        selection-background-color: rgb(187, 187, 187);
+        selection-color: rgb(60, 63, 65);
 }
 
+/*
+------- QPushButton
+*/
 QPushButton {
 	border-style: outset;
 	border-width: 2px;
@@ -89,6 +109,9 @@ QPushButton:disabled {
         padding-left: 20px;
 }
 
+/*
+------- QToolButton
+*/
 QToolButton {
         border-style: outset;
         border-width: 2px;
@@ -142,6 +165,9 @@ QToolButton:disabled {
         background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(57, 57, 57, 255), stop:1 rgba(77, 77, 77, 255));
 }
 
+/*
+------- QLineEdit
+*/
 QLineEdit {
         border-width: 1px;
         border-radius: 4px;
@@ -167,6 +193,9 @@ QLineEdit:read-only {
         background: lightblue;
 }
 
+/*
+------- QLabel
+*/
 QLabel {
         border-style: outset;
         border-width: 2px;
@@ -179,8 +208,28 @@ QLabel {
         color: rgb(255, 255, 255);
         padding: 2px;
         background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(77, 77, 77, 255), stop:1 rgba(97, 97, 97, 255));
+        text-align: left;
+        padding-left: 20px;
+}
+QLabel:disabled {
+        border-style: outset;
+        border-width: 2px;
+        border-top-color: qlineargradient(spread:pad, x1:0.5, y1:0.6, x2:0.5, y2:0.4, stop:0 rgba(115, 115, 115, 255), stop:1 rgba(62, 62, 62, 255));
+        border-right-color: qlineargradient(spread:pad, x1:0.4, y1:0.5, x2:0.6, y2:0.5, stop:0 rgba(115, 115, 115, 255), stop:1 rgba(62, 62, 62, 255));
+        border-left-color: qlineargradient(spread:pad, x1:0.6, y1:0.5, x2:0.4, y2:0.5, stop:0 rgba(115, 115, 115, 255), stop:1 rgba(62, 62, 62, 255));
+        border-bottom-color: rgb(58, 58, 58);
+        border-bottom-width: 1px;
+        border-style: solid;
+        color: rgb(0, 0, 0);
+        padding: 2px;
+        background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(57, 57, 57, 255), stop:1 rgba(77, 77, 77, 255));
+        text-align: left;
+        padding-left: 20px;
 }
 
+/*
+------- QRadioButton
+*/
 QRadioButton {
         color: rgb(255,255,255);
         background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(77, 77, 77, 255), stop:1 rgba(97, 97, 97, 255));
@@ -236,6 +285,9 @@ QRadioButton::indicator:checked {
         border: 2px solid rgb(200, 200, 200);
 }
 
+/*
+------- QProgressBar
+*/
 QProgressBar {
 	text-align: center;
 	color: rgb(240, 240, 240);
@@ -250,6 +302,9 @@ QProgressBar::chunk {
 	border-radius: 5px;
 }
 
+/*
+------- QMenuBar
+*/
 QMenuBar {
 	background:rgb(82, 82, 82);
 }
@@ -263,6 +318,9 @@ QMenuBar::item:selected {
 	background:rgb(115, 115, 115);
 }
 
+/*
+------- QMenu
+*/
 QMenu::item:selected {
 	color:rgb(255,255,255);
 	border-width:2px;
@@ -290,6 +348,9 @@ QMenu{
 	background-color:rgb(78,78,78);
 }
 
+/*
+------- QTabWidget
+*/
 QTabWidget {
 	color:rgb(0,0,0);
 	background-color:rgb(247,246,246);
@@ -302,6 +363,9 @@ QTabWidget::pane {
     	border-radius: 6px;
 }
 
+/*
+------- QTabBar
+*/
 QTabBar::tab {
 	padding:2px;
 	color:rgb(250,250,250);
@@ -325,15 +389,19 @@ QTabBar::tab:!selected {
         margin-right: 1px;
 }
 
-
+/*
+------- QFrame
+*/
 QFrame#line {
         background-color: rgb(187, 187, 187);
 }
 
+/*
+------- QStatusBar
+*/
 QStatusBar {
         background: rgb(187, 187, 187);
         color:rgb(24,24,24);
-
 }
 QStatusBar::item {
         margin: 1px;
@@ -346,6 +414,9 @@ QStatusBar QLabel {
         background:  transparent;
 }
 
+/*
+------- QMessageBox
+*/
 QMessageBox {
         background-color:rgb(82, 82, 82);
 }
@@ -487,53 +558,25 @@ QComboBox:!editable:on {
 }
 */
 
-/*
-------- QTextEdit
-*/
 
-QTextEdit {
-        border-width: 1px;
-        border-radius: 4px;
-        border-color: rgb(58, 58, 58);
-        border-style: inset;
-        padding: 0 8px;
-        color: rgb(255, 255, 255);
-        background:rgb(100, 100, 100);
-        selection-background-color: rgb(187, 187, 187);
-        selection-color: rgb(60, 63, 65);
-}
-QTextEdit:disabled {
-        border-width: 1px; border-radius: 4px;
-        border-color: rgb(58, 58, 58);
-        border-style: inset;
-        padding: 0 8px;
-        color: rgb(187, 187, 187);
-        background:rgb(100, 100, 100);
-        selection-background-color: rgb(187, 187, 187);
-        selection-color: rgb(60, 63, 65);
-}
 
 /*
 ------- QCheckBox
 */
-
-
 QCheckBox {
         color:rgb(223,219,210);
         padding: 2px;
-
-border-style: outset;
-border-width: 2px;
-border-top-color: qlineargradient(spread:pad, x1:0.5, y1:0.6, x2:0.5, y2:0.4, stop:0 rgba(115, 115, 115, 255), stop:1 rgba(62, 62, 62, 255));
-border-right-color: qlineargradient(spread:pad, x1:0.4, y1:0.5, x2:0.6, y2:0.5, stop:0 rgba(115, 115, 115, 255), stop:1 rgba(62, 62, 62, 255));
-border-left-color: qlineargradient(spread:pad, x1:0.6, y1:0.5, x2:0.4, y2:0.5, stop:0 rgba(115, 115, 115, 255), stop:1 rgba(62, 62, 62, 255));
-border-bottom-color: rgb(58, 58, 58);
-border-bottom-width: 1px;
-border-style: solid;
-color: rgb(255, 255, 255);
-padding: 2px;
-background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(77, 77, 77, 255), stop:1 rgba(97, 97, 97, 255));
-
+        border-style: outset;
+        border-width: 2px;
+        border-top-color: qlineargradient(spread:pad, x1:0.5, y1:0.6, x2:0.5, y2:0.4, stop:0 rgba(115, 115, 115, 255), stop:1 rgba(62, 62, 62, 255));
+        border-right-color: qlineargradient(spread:pad, x1:0.4, y1:0.5, x2:0.6, y2:0.5, stop:0 rgba(115, 115, 115, 255), stop:1 rgba(62, 62, 62, 255));
+        border-left-color: qlineargradient(spread:pad, x1:0.6, y1:0.5, x2:0.4, y2:0.5, stop:0 rgba(115, 115, 115, 255), stop:1 rgba(62, 62, 62, 255));
+        border-bottom-color: rgb(58, 58, 58);
+        border-bottom-width: 1px;
+        border-style: solid;
+        color: rgb(255, 255, 255);
+        padding: 2px;
+        background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(77, 77, 77, 255), stop:1 rgba(97, 97, 97, 255));
 }
 QCheckBox:hover {
         border-radius:4px;
